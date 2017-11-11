@@ -45,10 +45,9 @@ You then get to specify:
     -   Zero is a legal value (and may be all you have!)
     -   If you ask to burn more fuel than you have, burn all that you have
     -   If you ask to burn a negative amount of fuel, it should be treated as zero
-
-The game ends when your altitude becomes zero or negative. A safe
-landing occurs if your speed is under 10 meters/second. Otherwise, you
-blast a new crater in the moons surface.
+- The game ends when your altitude becomes zero or negative. 
+	- A *safe* landing occurs if your speed is under 10 meters/second. 
+	- Otherwise, you blast a new crater in the moons surface.
 
 At each turn, you will need to do the following calculations:
 
@@ -64,8 +63,9 @@ At each turn, you will need to do the following calculations:
     the amount remaining to zero.)
 
 After these calculations, you need to determine if you have "landed."
-You have landed if your altitude is *less than or equal to* zero (it is highly improbable that you would ever
-get *exactly* zero). A *safe* landing is one where your velocity is not more than 10 meters/second.
+You have landed if your altitude is *less than or equal to* zero 
+(it is highly improbable that you would ever get *exactly* zero). 
+A safe landing occurs if your speed is under 10 meters/second. 
 
 Either way, the game ends when you have landed. If you have landed
 safely, adjust your altitude to be zero before printing out the final
