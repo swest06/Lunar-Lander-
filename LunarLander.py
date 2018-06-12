@@ -92,33 +92,37 @@ def game_ll(alti, veloc_u, veloc_d, fuel):
 	else:
 		print("You crashed and made a crater " + str(crater) + " meters deep.")
 	print("")
-	
-# Replay loop			
-finished = False
-while not finished:
-	alti = 1000.0
-	veloc_u = 0.0
-	veloc_d = 0.0
-	fuel = 1000.0
-	
-	game_ll(alti, veloc_u, veloc_d, fuel)
-	answer = False
-	while not answer:
-		replay = input("Do you want to play again? y/n: ").lower()
-		if replay[0] == "y":
-			print("")
-			answer = True
-			finished = False
-		elif replay[0] == "n":
-			print("")
-			print("Thank you for playing")
-			print("Goodbye.")
-			answer = True
-			finished = True
-		else:
-			print("Incorrect response please answer either 'YES' or 'NO'. ")
-			print("")
-			answer = False
-			finished = True
 
 
+def main():
+        # Replay loop			
+        finished = False
+        while not finished:
+                alti = 1000.0
+                veloc_u = 0.0
+                veloc_d = 0.0
+                fuel = 1000.0
+                
+                game_ll(alti, veloc_u, veloc_d, fuel)
+                answer = False
+                while not answer:
+                        replay = input("Do you want to play again? y/n: ").lower()
+                        if replay[0] == "y":
+                                print("")
+                                answer = True
+                                finished = False
+                        elif replay[0] == "n":
+                                print("")
+                                print("Thank you for playing")
+                                print("Goodbye.")
+                                answer = True
+                                finished = True
+                        else:
+                                print("Incorrect response please answer either 'YES' or 'NO'. ")
+                                print("")
+                                answer = False
+                                finished = True
+
+
+if __name__ == "__main__":
+        main()
